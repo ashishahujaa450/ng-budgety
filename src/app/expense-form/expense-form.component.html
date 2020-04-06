@@ -1,0 +1,26 @@
+<div class="add">
+  <div class="add__container">
+    <select class="add__type red-focus" name="type" [(ngModel)]="data.type">
+      <option value="inc" selected>+</option>
+      <option value="exp">-</option>
+    </select>
+    <input
+      type="text"
+      class="add__description red-focus"
+      placeholder="Add description"
+      name="description"
+      [(ngModel)]="data.description"
+    />
+    <input
+      type="number"
+      class="add__value red-focus"
+      placeholder="Value"
+      name="amount"
+      [(ngModel)]="data.amount"
+      (keyup.enter)="addData($event)"
+    />
+    <button class="add__btn red" (click)="addData($event)">
+      Add
+    </button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="item clearfix" id="expense-{{ currentItem.id }}">
+  <div class="item__description">{{ currentItem.description }}</div>
+  <div class="right clearfix">
+    <div class="item__value">- {{ currentItem.amount }}</div>
+    <div class="item__percentage">{{ currentItem.singlePercentage }}%</div>
+    <div class="item__delete">
+      <button class="item__delete--btn" (click)="removeExpense(currentItem.id)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

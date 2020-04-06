@@ -1,0 +1,11 @@
+<div class="item clearfix" id="income-{{ currentItem.id }}">
+  <div class="item__description">{{ currentItem.description }}</div>
+  <div class="right clearfix">
+    <div class="item__value">+ {{ currentItem.amount }}</div>
+    <div class="item__delete">
+      <button class="item__delete--btn" (click)="removeIncome(currentItem.id)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
